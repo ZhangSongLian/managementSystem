@@ -1,0 +1,68 @@
+// 变量 less 以@开头定义变量，并且使用时直接键入@名称
+@blue: #3190e8;  
+@bc: #e4e4e4;
+@fc:#fff;
+
+// 背景图片地址和大小
+.bg( @url) {
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* flex布局 和子元素对其方式*/
+.df-sb(@type:space-between) {
+    display:flex;
+    align-items: center;
+    justify-content:@type;
+}
+.df-sa {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// 垂直居中
+.df-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ts-c {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.ts-mc {
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0; top: 0;
+    margin: auto;
+}
+
+.ctp(@width, @height) {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -@height/2;
+    margin-left: -@width/2;
+}
+
+//宽高
+.wh (@width,@height) {
+    width: @width;
+    height:@height;
+}
+                                                                  
+//字体大小，行高
+.fh(@size,@line-height){
+    font-size: @size;
+    line-height: @line-heigh;
+}
+
+//字体大小和颜色
+.sc(@size,@color){
+    font-size: @size;
+    color: @color;
+}

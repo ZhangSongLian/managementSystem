@@ -1,0 +1,64 @@
+//初始化css样式
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, 
+h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    font-family: "Microsoft Yahei",sans-serif;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none;}   
+
+html,body{
+    height: 100%;
+    width: 100%;
+    // background-color: #F5F5F5;
+}
+
+.fillcontain{
+    height: 100%;
+    width: 100%;
+}
+
+/* 浮动 */
+.fl { float: left; }
+.fr { float: right; }
+.cf { zoom: 1; }
+.cf:after {
+    content:".";
+    display:block;
+    clear:both;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+/*单行文本溢出隐藏*/
+.wes { /* 多出部分用省略号表示 , 用于一行 */
+    overflow:hidden;
+    word-wrap:normal;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+/* 多行文本溢出隐藏*/
+.wes-2 { /* 适用于webkit内核和移动端 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} 
